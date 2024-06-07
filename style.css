@@ -664,7 +664,244 @@ footer {
 }
 
 }
-/* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
+/* Small devices (phones, less than 320px) */
+@media only screen and (max-width: 767px) {
     /* ... */
+/* Pour garder une position centrée du logo */
+body{ 
+    width: 410px;
+}
+/* Header */
+header{
+    display: flex;
+    flex-direction: column;
+    width: 379px;
+    height: 115px;
+}   
+.logo{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    width: 121px;
+    height: 79px;
+}
+/* Menu */
+ul.menu{
+    width: 444px;
+    height: 36px;
+}
+
+.tab {
+    flex: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 4px solid #F2F2F2;
+    padding-bottom: 20px;
+}
+.tab:hover {
+    border-bottom: 3px solid #0065FC;
+    border-top: 0;
+}
+.tab:hover a {
+    border-top: none;
+}
+/* Main - corps de la page */
+/* Partie Recherche */
+#zone-recherche{
+    width: 100%;
+}
+input{
+    width: 100%;
+}
+/* On masque le bouton rechercher */
+.bouton_rechercher_desktop_tablette{
+    display: none
+}
+/* Affichage du bouton loupe pour mobile */
+.bouton_rechercher_mobile {
+    display: block;
+    background-color: #0065FC;
+    color: white;
+    border: none;
+    border-radius: 18px;
+    padding-left: 19px;
+    padding-right: 19px;
+    /* position relative et rigth 15px pour décaler le bouton "loupe" légèrement vers la gauche sur le champ de recherche */
+    position: relative;
+    right: 15px;
+}
+/* Dimensionnement de l'icône "loupe" */
+.loupe{
+    font-size: 18px;
+}
+/* Réduire la taille de l'écriture par défaut dans le champ de recherche input pour éviter troncage */
+::placeholder {
+    font-size: 20px;
+}
+/* Partie filtres et info */
+h1{
+    font-size: 25px;
+
+}
+#filtres-categories {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-left: 8px;
+}
+
+.aspect-filtres {
+    width: calc(50% - 5px); /* Répartit les filtres sur deux colonnes */
+    margin-bottom: 10px;
+    margin-left: 0px;
+    margin: 2px;
+}
+#titre-filtres{
+    margin-bottom: 20px;}
+.aspect-filtres{
+    white-space: nowrap; /* évite le retour à la ligne de autorisés pour la catégorie "animaux autorisés" */
+}
+
+
+/* Partie info */
+#info{
+    margin-top: 0px;
+}
+#texte_info{
+    font-size: 16px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+/* Partie hébergements et populaires */
+#hebergements-pop{
+    display: flex;
+    flex-direction: column-reverse;
+    padding : 0px;
+}
+#hebergements{
+    background-color: transparent;
+    width: 100%;
+    padding-top: 40px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.hebergements-image {
+    width: 355px;
+    height: 124px;
+    object-fit: cover;
+    border-radius: 16px 16px 0px 0px;
+}
+#titre-hebergements-ville{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#resultats-hebergements{
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 20px;
+}
+.choix-hebergements{
+    width: 100%;
+    margin-top: 6px;
+}
+.titre-hebergements{
+    font-size: 2vmax;
+}
+.prix-hebergements{
+    font-size: 2.1vmax;
+}
+.etoiles-hebergements{
+    font-size: 1.6vmax;
+}
+#afficher_plus{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 16px;
+    height: 21px;
+}
+.hebergements-and-populaires section{
+    width: 100%;
+    border-radius: 0px;
+    margin-left: 0px;
+    padding-top: 40px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.populaires-title{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.populaires{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.selection_les_plus_populaires{
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+.titre_selection_populaires{
+    font-size: 2.5vmax;
+}
+.prix_selection_populaires{
+    font-size: 2.1vmax;
+}
+.etoiles_populaires{
+    font-size: 1.6vmax;
+    padding-top: 0;
+}
+/* Partie Activités */
+#activites-ville{
+    padding: 0px;
+    margin-top: 65px;
+}
+#titre-activites-ville{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+#selection-activites {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    margin-top: 30px;
+    height: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.titre-selection-activite{
+    font-size: 16px;
+    padding-top: 3px;
+    white-space: normal;
+    padding: 18px;
+}
+.tous-les-elements{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 200px;
+    width: 350px;
+    padding-bottom: 40px;
+}
+/* Partie Footer */
+footer{
+    flex-direction: column;
+    margin-top: 28px;
+}
+.footer-colonne{
+    width: 100%;
+}
+/* Réduire la marge à gauche */
+#recherche, #filtres-info, footer{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+footer{
+    padding-top: 20px;
+}
 }
