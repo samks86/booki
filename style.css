@@ -186,7 +186,7 @@ input:-webkit-autofill:focus {
   padding-right: 15px;
   padding-left: 35px;
 }
-.aspect-filtres p {
+.aspect-filtres {
   /* padding-left: 17px;*/
 }
 .aspect-filtres:hover,
@@ -316,7 +316,7 @@ h2 {
 .titre-hebergements {
   font-weight: 750;
   font-size: 1.13vmax;
-  white-space: nowrap;
+  white-space: normal;
 }
 .prix-hebergements {
   font-size: 1vmax;
@@ -658,7 +658,7 @@ li.liens-footer:active a {
 }
 /* Small devices (phones, less than 320px) */
 @media screen and (max-width: 767px) {
-    
+
   /* Header */
   header {
     display: flex;
